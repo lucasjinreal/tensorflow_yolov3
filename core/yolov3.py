@@ -199,7 +199,7 @@ class YoloV3(object):
                 var_weights = weights[ptr:ptr + num_params].reshape((shape[3], shape[2], shape[0], shape[1]))
                 var_weights = np.transpose(var_weights, (2, 3, 1, 0))
                 ptr += num_params
-                assign_ops.append(tf.assign(var1, var_weights, validate_shape=True))
+                assign_ops.append(tf.assign(var_1, var_weights, validate_shape=True))
                 i += 1
         return assign_ops
 

@@ -1,3 +1,4 @@
 yolov3.weights
+./data/yolov3.weights
 .idea/
 __pycache__/

@@ -69,7 +69,7 @@ def predict_from_origin_weights(img_f):
     yolo_v3 = YoloV3()
     with tf.variable_scope('detector'):
         detections = yolo_v3.yolo_v3_pipeline(inputs, 80, img_size, data_format='NCHW')
-        load_ops = yolo_v3.load_weights_from_yolo_origin(tf.global_variables(scope='model'), 'yolov3.weights')
+        load_ops = yolo_v3.load_weights_from_yolo_origin(tf.global_variables(scope='model'), 'data/yolov3.weights')
 
     boxes = yolo_v3.detections_boxes(detections)
     with tf.Session() as sess:
